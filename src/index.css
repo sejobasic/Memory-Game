@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Press+Start+2P&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5em;
+  text-align: center;
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cb4d6bd2-8886-49d7-a287-54ce3e719298/d7p2yk6-9559adcb-f056-4b83-819a-4ad1dba1e58a.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NiNGQ2YmQyLTg4ODYtNDlkNy1hMjg3LTU0Y2UzZTcxOTI5OFwvZDdwMnlrNi05NTU5YWRjYi1mMDU2LTRiODMtODE5YS00YWQxZGJhMWU1OGEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9v6UpIN6Wxg7x9ks9-2tXKWnKMpPCRLMK2tlghNn7TU');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #b2f7ef;
+  color: #60514f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
