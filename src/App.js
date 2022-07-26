@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './App.css';
+import './App.css'
+import Card from './components/Card'
 
 const cardImages = [
   { 'src': '/assets/anchor.png' },
@@ -16,21 +17,26 @@ function App() {
 
   // Shuffle cards, duplicate images array
   // For each item in the array add on id property
-  function shuffleCards () {
+  function shuffleCards() {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
 
-      setCards(shuffledCards)
-      setTurns(0)
+    // Update our card state to be the shuffled cards after function generates them
+    // Create state to see number of turns taken, when a new game starts turns resets to 0
+    setCards(shuffledCards)
+    setTurns(0)
   }
+
+  console.log(cards, turns)
 
   return (
     <div className='App'>
       <h1>Pirate Match</h1>
-      <button>New Game</button>
+      <button onClick={shuffleCards}>New Game</button>
+      <Card cards={cards} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
