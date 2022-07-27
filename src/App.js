@@ -16,6 +16,7 @@ function App() {
   const [turns, setTurns] = useState(0)
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
+  const [disabled, setDisabled] = useState(false)
 
   // When user clicks on first card update choiceOne state value to be that card
   // When user clicks on second card update choiceTwo state value to be that card
@@ -44,11 +45,13 @@ function App() {
     setChoiceOne(null)
     setChoiceTwo(null)
     setTurns(prevTurns => prevTurns + 1)
+    setDisabled(false)
   }
 
   // Compare two selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
+      setDisabled(true)
       // If choiceOne src equals choiceTwo src then we have a match
       // Then update the cards state taking the prev cards state to update it
       // Then return new array of cards using map
@@ -82,6 +85,7 @@ function App() {
             card={card} 
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disabled={disabled}
           />
         ))}
       </div>
