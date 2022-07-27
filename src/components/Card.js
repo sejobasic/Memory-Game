@@ -1,8 +1,8 @@
 import React from 'react'
 import './Card.css'
 
-function Card({ card, handleChoice }) {
-  
+function Card({ card, handleChoice, flipped }) {
+
   // Update choice state
   function handleClick() {
     handleChoice(card)
@@ -10,7 +10,7 @@ function Card({ card, handleChoice }) {
 
   return (
     <div className='card'>
-      <div>
+      <div className={flipped ? 'flipped' : ''}>
         <img className='front' src={card.src} alt='pirate card front' />
         <img
           className='back'

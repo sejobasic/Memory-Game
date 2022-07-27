@@ -20,8 +20,6 @@ function App() {
   // When user clicks on first card update choiceOne state value to be that card
   // When user clicks on second card update choiceTwo state value to be that card
 
-
-
   // Shuffle cards, duplicate images array
   // For each item in the array add on id property
   function shuffleCards() {
@@ -82,7 +80,8 @@ function App() {
           <Card 
             key={card.id} 
             card={card} 
-            handleChoice={handleChoice} 
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
           />
         ))}
       </div>
