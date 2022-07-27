@@ -48,6 +48,11 @@ function App() {
     setDisabled(false)
   }
 
+  // Start game automatically
+  useEffect(() => {
+    shuffleCards()
+  }, [])
+
   // Compare two selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
@@ -89,6 +94,7 @@ function App() {
           />
         ))}
       </div>
+      <p>Turns:{turns}</p>
     </div>
   )
 }
